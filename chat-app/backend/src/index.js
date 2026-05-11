@@ -11,7 +11,7 @@ const PORT= process.env.PORT || 3000;
 app.use(express.json()) 
 app.use(cookieParser())
 app.use(cors({
-   origin: ['http://localhost:5173', 'https://link-up-9pa0.onrender.com'],
+   origin: ['http://localhost:5173', 'https://chat-application-ebon-phi.vercel.app'],
   credentials: true
 }));
 const predefinedQA = [
