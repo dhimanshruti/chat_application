@@ -9,7 +9,7 @@ const io = new Server(server, {
   cors: {
     origin: [
       "http://localhost:5173",
-      "https://link-up-9pa0.onrender.com"
+      "https://chat-application-ebon-phi.vercel.app"
     ],
     credentials: true
   },
