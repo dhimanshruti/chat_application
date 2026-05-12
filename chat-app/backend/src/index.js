@@ -11,8 +11,12 @@ const PORT= process.env.PORT || 3000;
 app.use(express.json()) 
 app.use(cookieParser())
 app.use(cors({
-   origin: ['http://localhost:5173', 'https://chat-application-ebon-phi.vercel.app'],
-  credentials: true
+  origin: [
+    "http://localhost:5173",
+    "https://chat-application-ebon-phi.vercel.app"
+  ],
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE"]
 }));
 const predefinedQA = [
   { question: "What services do you offer?", answer: "We provide AI automation, chatbot integration, and data scraping solutions." },
