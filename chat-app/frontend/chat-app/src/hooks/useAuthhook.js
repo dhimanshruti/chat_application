@@ -132,6 +132,9 @@ const useAuthhook = create((set, get) => ({
     if (!authUser || get().socket?.connected) return;
 
     socket = io("https://chat-application-apk7.onrender.com", {
+  query: {
+    userId: authUser._id,
+  },
   withCredentials: true,
   transports: ["websocket", "polling"],
 });
