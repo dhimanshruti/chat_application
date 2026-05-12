@@ -2,6 +2,7 @@ import { create } from "zustand";
 import axiosInstance from "../lib/axios";
 import toast from "react-hot-toast";
 import { io } from "socket.io-client";
+let socket = null;
 
 const useAuthhook = create((set, get) => ({
   authUser: null,
