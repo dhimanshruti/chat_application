@@ -130,8 +130,9 @@ const useAuthhook = create((set, get) => ({
   connectSocket: () => {
     const { authUser } = get();
 
-    if (!authUser || get().socket?.connected) return;
+    if (!authUser?._id) return;
 
+if (socket?.connected) return;
     socket = io("https://chat-application-apk7.onrender.com", {
   query: {
     userId: authUser._id,
