@@ -7,12 +7,11 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: [
-      "http://localhost:5173",
-      "https://chat-application-ebon-phi.vercel.app"
-    ],
-    credentials: true
+    origin: "https://chat-application-ebon-phi.vercel.app",
+    methods: ["GET", "POST"],
+    credentials: true,
   },
+  transports: ["websocket", "polling"],
 });
 
 const userSocketMap = {}; // { userId : socketId }
