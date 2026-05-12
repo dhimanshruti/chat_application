@@ -110,12 +110,12 @@ export const verifyPassword = async (req, res) => {
 
 export const logout = (req, res) => {
   try {
-    res.cookie("jwt", "", {
-      maxAge: 0,
-      sameSite: "None",
-      secure: true,
-      httpOnly: true,
-    });
+    res.cookie("jwt", token, {
+  maxAge: 7 * 24 * 60 * 60 * 1000,
+  httpOnly: true,
+  sameSite: "none",
+  secure: true,
+});
 
     res.status(200).json({ message: "Successfully Logged Out" });
 
